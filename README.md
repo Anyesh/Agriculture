@@ -17,14 +17,9 @@ as input and predicts a best 3 types of vegitables.
 
 # Usage
 
-edit the dataset path on the **train_model.py** file
-```python
-df = pd.read_csv('dataset.csv')
-```
-
-train the model
+run the **train_model.py** file for training
 ```bash
-$ python train_model.py
+$ python tran_model.py --dataset=datasate.csv --l=learning_rate --batch=batch_size --epoch=epoch --input=input_dims --output=output_dims
 ```
 
 test the model
