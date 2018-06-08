@@ -24,5 +24,5 @@ $ python tran_model.py --dataset=datasate.csv --l=learning_rate --batch=batch_si
 
 test the model
 ```bash
-$ python test_model.py
+$ python test_model.py --label=label_name --model=trained_model --test=test_set
 ```
