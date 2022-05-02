@@ -22,7 +22,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 def is_valid_file(parser, arg):
     if not os.path.exists(arg):
-        parser.error("The file %s does not exist!" % arg)
+        parser.error(f"The file {arg} does not exist!")
     else:
         return open(arg, 'r')  # return an open file handle
 
@@ -86,7 +86,7 @@ def train_model(args):
     model.compile(
         loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    tensorboard = TensorBoard(log_dir="logs/{}".format(time()))
+    tensorboard = TensorBoard(log_dir=f"logs/{time()}")
     model.fit(
         x_train,
         y_train,
